@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    min-height: 100vh;
+    background: url(astronaut-152023.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: black;
+    padding: 15px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+header .logo{
+    font-size: 30px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: white;
+}
+
+
+.content {
+    text-align: center;
+    position: relative;
+}
+
+/* Styles for all anchor tags */
+.content a {
+    display: block; /* Keep links as inline-block for proper spacing */
+}
+
+/* Update button styles */
+.content .btn {
+    margin-bottom: 20px; /* Space below the button */
+
+}
+
+/* Styles for social media icons */
+.content .social-icon {
+    display: inline-block; /* Use inline-block to keep them in a row */
+    margin: 0 5px; /* Horizontal margin between icons */
+}
+
+.content i {
+    color: #fff; /* Icon color */
+    opacity: 0.6; /* Initial opacity */
+    font-size: 20px; /* Icon size */
+    transition: all 0.2s; /* Transition for hover effect */
+}
+
+.content i:hover {
+    opacity: 1; /* Full opacity on hover */
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5); /* Hover effect */
+    font-size: 25px; /* Scale up on hover */
+}
+
+nav a{
+    font-size: 18px;
+    text-transform: capitalize;
+    margin: 15px;
+    padding: 8px;
+    color: white;
+    font-weight: 500;
+    border-bottom: solid transparent 3px;
+    /* transition: box-shadow 0.3s ease; */
+    /* Initial box-shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    /* Add transition effect for smooth animation */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+}
+#check:checked ~ nav a {
+    color: black; /* Black when sidebar is open */
+}
+
+nav a:hover{
+    border-bottom: solid #0050d4 3px ;
+    color: #0050d4;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    font-weight: 700; /* Increase font weight on hover */
+
+    box-shadow: 0 8px 16px rgba(145, 46, 46, 0.4);
+
+    /* Slight scaling effect on hover */
+    transform: scale(1.05);
+
+}
+#check:checked ~ nav:hover a {
+    color: rgb(165, 16, 16);
+}
+
+
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #0050d4;
+    color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-size: 600;
+}
+.btn:hover {
+    transform: scale(1.05); /* Slightly scale up the button */
+    background-color: #0041a3; /* Optional: Change background color on hover */
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#check{
+    display: none;
+}
+#check:checked~nav{
+    left: 0;
+    opacity: 1;
+}
+label{
+    font-size: 35px;
+    cursor: pointer;
+    color: #fff;
+    display: none;
+
+}
+#check:checked ~ nav:hover {
+    color: black;
+}
+
+
+/* Styles for screens smaller than 898px */
+@media (max-width: 898px) {
+    header {
+        /* padding: 4%; */
+        padding: 15px 4%;
+        transition: padding 0.3s ease;
+    }
+    nav {
+        margin: 10px;
+        transition: margin 0.3s ease;
+    }
+}
+
+/* Styles for screens smaller than 798px */
+@media (max-width: 798px) {
+    header {
+        padding: 10px 3%; /* Further reduce padding */
+    }
+    header nav {
+        position: absolute;
+        left: -100%; /* Hidden initially */
+        top: 100%;
+        width: 100%;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        opacity: 0; /* Hidden */
+        z-index: 10; /* Ensure it is on top */
+    }
+
+    header nav a {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        box-shadow: 0 0 10px #0050d4;
+        border-radius: 10px;
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    label {
+        display: block;
+        cursor: pointer; /* Add pointer cursor */
+    }
+}
+
+@media (max-width: 500px) {
+    header {
+        padding: 8px 2%; /* Compact padding for very small screens */
+    }
+
+    header nav a {
+        font-size: 18px; /* Adjust font size for smaller screens */
+        margin-top: 20px;
+    }
+}
+section{
+    padding: 6%;
+    height: 100vh;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+.content{
+    text-align: center;
+    position: relative;
+}
+.content h1{
+    font-size: 40px;
+    color: #fff;
+    text-transform:capitalize ;
+    letter-spacing: 1px;
+}
+
+.content p{
+    line-height: 1.4;
+    font-size: 17px;
+    color: #eee;
+    margin: 20px 30px ;
+
+}
+section .content .btn{
+    background-color: #fff;
+    color:#0050d4 ;
+    transition: .3s ease;
+}
+.btn:hover{
+    transform: scale(1.1);
+}
